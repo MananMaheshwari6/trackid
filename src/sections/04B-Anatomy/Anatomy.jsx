@@ -104,7 +104,7 @@ export default function Anatomy() {
             {data.eyebrow}
           </p>
 
-          <h2 className="font-display text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-ink max-w-xl">
+          <h2 className="font-display text-[length:var(--text-hero-lg)] leading-[1.05] text-ink max-w-xl">
             Crafted for every personality.
             <br />
             Designed for everyday protection.
@@ -133,7 +133,7 @@ export default function Anatomy() {
             <img
               src={ASSETS.pendants.classicTeardrop.heroImage}
               alt="TrakID Pendant"
-              className="relative z-10 w-[340px] lg:w-[430px]"
+              className="relative z-10 w-[280px] xs:w-[340px] lg:w-[430px]"
             />
           </motion.div>
         </motion.div>
@@ -148,7 +148,7 @@ export default function Anatomy() {
           Our Collection
         </p>
 
-        <h2 className="mt-6 font-display text-5xl md:text-6xl text-ink">
+        <h2 className="mt-6 font-display text-[length:var(--text-hero-lg)] text-ink">
           Four Designs.
           <br />
           Endless Stories.

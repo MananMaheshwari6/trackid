@@ -83,7 +83,7 @@ export default function InstitutionalAsk() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid gap-20 lg:grid-cols-[1fr_520px]"
+        className="grid gap-20 lg:grid-cols-[1fr_minmax(320px,520px)]"
       >
 
         {/* LEFT COLUMN */}
@@ -94,7 +94,7 @@ export default function InstitutionalAsk() {
             {copy.eyebrow}
           </p>
 
-          <h2 className="mt-5 font-display text-5xl md:text-6xl text-ink leading-tight">
+          <h2 className="mt-5 font-display text-[length:var(--text-hero-lg)] text-ink leading-[1.1]">
             {copy.headline}
           </h2>
 
@@ -165,7 +165,7 @@ export default function InstitutionalAsk() {
 
         <motion.div
           variants={fadeUp}
-          className="rounded-[36px] border border-gold/20 bg-white/70 p-10 backdrop-blur-xl shadow-xl"
+          className="rounded-[36px] border border-gold/20 bg-white/70 p-6 xs:p-8 md:p-10 backdrop-blur-xl shadow-xl"
         >
             {submitted ? (
   <div className="flex min-h-[520px] flex-col items-center justify-center text-center">

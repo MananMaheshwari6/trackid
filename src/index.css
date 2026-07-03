@@ -4,6 +4,25 @@
 @tailwind utilities;
 /* stylelint-enable at-rule-no-unknown */
 
+@layer base {
+  :root {
+    /* Fluid section padding (vertical): 5rem (80px) @ 320px → 8rem (128px) @ 1280px */
+    --section-py: clamp(5rem, 3.8rem + 6vw, 8rem);
+    
+    /* Fluid gap-large: 2.5rem @ 320px → 5rem @ 1280px */
+    --gap-lg: clamp(2.5rem, 1.5rem + 5vw, 5rem);
+    
+    /* Fluid headline sizes */
+    --text-hero: clamp(3rem, 1rem + 10vw, 6rem);
+    --text-hero-lg: clamp(3.5rem, 1.5rem + 12vw, 82px);
+    --text-section: clamp(2.25rem, 1.5rem + 3.75vw, 4.5rem);
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
 /* ==========================================================
    TRAKID GLOBAL STYLES
 ========================================================== */
@@ -117,9 +136,9 @@
 .annotation {
   backface-visibility: hidden;
   transform-style: preserve-3d;
-/* Reduced motion respect — CSS-level safety net.
-   JS-level checks via useReducedMotion() are the primary mechanism,
-   but this catches any raw CSS animations that slip through. */
+}
+
+/* Reduced motion respect — CSS-level safety net. */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

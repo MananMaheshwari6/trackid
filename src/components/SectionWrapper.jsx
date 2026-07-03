@@ -12,11 +12,11 @@
  */
 export default function SectionWrapper({ id, className = '', fullWidth = false, children }) {
   return (
-    <section id={id} className={`py-20 md:py-32 ${className}`}>
+    <section id={id} className={`w-full ${className}`} style={{ paddingTop: 'var(--section-py)', paddingBottom: 'var(--section-py)' }}>
       {fullWidth ? (
         children
       ) : (
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16">
           {children}
         </div>
       )}

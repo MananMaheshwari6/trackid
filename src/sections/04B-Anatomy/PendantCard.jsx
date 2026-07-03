@@ -66,7 +66,7 @@ export default function PendantCard({ item }) {
         border-gold/20
         bg-white/70
         backdrop-blur
-        p-10
+        p-6 xs:p-8 md:p-10
         shadow-sm
         transition-[border-color,box-shadow]
         duration-300
@@ -94,7 +94,7 @@ export default function PendantCard({ item }) {
             animate={{ rotateY: showBack ? 180 : 0 }}
             transition={{ duration: 0.6, ease: EASE }}
             style={{ transformStyle: "preserve-3d" }}
-            className="relative w-[250px] lg:w-[280px]"
+            className="relative w-[220px] xs:w-[250px] lg:w-[280px]"
           >
             <motion.img
               src={image}
