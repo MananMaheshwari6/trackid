@@ -445,7 +445,7 @@ export default function Hero() {
           <div className="flex flex-col items-center text-center">
             <h1
               ref={wordmarkRef}
-              className="font-display text-6xl md:text-8xl font-medium text-parchment mb-4 tracking-tight drop-shadow-xl"
+              className="font-display font-medium text-parchment mb-4 tracking-tight drop-shadow-xl text-[length:var(--text-hero)]"
             >
               {COPY.hero.wordmark}
             </h1>
@@ -470,7 +470,7 @@ export default function Hero() {
         {/* ── Showcase Info Panel 1 (Right Side) ──────────────────── */}
         <div
           ref={panelRef}
-          className="absolute right-[8%] md:right-[12%] top-1/2 -translate-y-1/2 pointer-events-none max-w-xs md:max-w-sm"
+          className="absolute right-5 xs:right-[8%] md:right-[12%] top-1/2 -translate-y-1/2 pointer-events-none max-w-[240px] xs:max-w-xs md:max-w-sm"
           style={{ opacity: prefersReducedMotion ? 1 : 0 }}
         >
           <h2
@@ -505,7 +505,7 @@ export default function Hero() {
         {/* ── Showcase Info Panel 2 (Left Side) ───────────────────── */}
         <div
           ref={panel2Ref}
-          className="absolute left-[8%] md:left-[12%] top-1/2 -translate-y-1/2 pointer-events-none max-w-xs md:max-w-sm text-left"
+          className="absolute left-5 xs:left-[8%] md:left-[12%] top-1/2 -translate-y-1/2 pointer-events-none max-w-[240px] xs:max-w-xs md:max-w-sm text-left"
           style={{ opacity: prefersReducedMotion ? 1 : 0 }}
         >
           <h2

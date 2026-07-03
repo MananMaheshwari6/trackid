@@ -3,6 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      screens: {
+        'xs': '425px',
+        '3xl': '1920px',
+      },
       colors: {
         ink:        '#0E1116',   // primary text, dark surfaces
         parchment:  '#F7F5F0',   // default page background

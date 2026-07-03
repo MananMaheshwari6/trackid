@@ -12,7 +12,7 @@ export default function Closing() {
       <div className="max-w-5xl mx-auto flex flex-col gap-16">
 
         <motion.div {...fadeUp} className="flex flex-col gap-4 items-center text-center">
-          <h2 className="font-display text-5xl md:text-7xl text-ink">
+          <h2 className="font-display text-[length:var(--text-hero-lg)] text-ink">
             {brandStatement}
           </h2>
           <p className="font-body text-base text-slate max-w-md leading-relaxed">
@@ -22,7 +22,7 @@ export default function Closing() {
 
         <Divider />
 
-        <motion.div {...fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <motion.div {...fadeUp} className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8">
 
           {footerColumns.map((col) => (
             <div key={col.heading} className="flex flex-col gap-4">

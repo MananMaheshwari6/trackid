@@ -56,7 +56,7 @@ export default function ComplianceCase() {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true, margin: "-80px" }}
-          className="relative grid gap-20 lg:grid-cols-[1fr_600px] items-center"
+          className="relative grid gap-20 lg:grid-cols-[1fr_minmax(400px,600px)] items-center"
         >
 
           {/* LEFT — headline */}
@@ -65,7 +65,7 @@ export default function ComplianceCase() {
               {data.eyebrow}
             </p>
 
-            <h2 className="mt-6 font-display text-5xl md:text-7xl xl:text-[82px] leading-[0.93] tracking-tight text-ink max-w-xl">
+            <h2 className="mt-6 font-display text-[length:var(--text-hero-lg)] leading-[0.93] tracking-tight text-ink max-w-xl">
               {data.headline}
             </h2>
 
@@ -86,7 +86,7 @@ export default function ComplianceCase() {
           {/* RIGHT — pendant + timeline */}
           <motion.div
             variants={fadeUp}
-            className="grid grid-cols-[240px_1fr] items-start gap-8"
+            className="grid grid-cols-1 md:grid-cols-[240px_1fr] items-start gap-8"
           >
 
             {/* Pendant placeholder */}
@@ -273,7 +273,7 @@ export default function ComplianceCase() {
           <FloatPendant reducedMotion={reducedMotion}>
             <div className="relative flex justify-center">
               <div className="absolute h-64 w-64 rounded-full bg-gold/12 blur-[80px]" />
-              <div className="relative flex h-[380px] w-[220px] items-center justify-center
+              <div className="relative flex h-[380px] w-[200px] sm:w-[220px] items-center justify-center
                               rounded-[90px] border border-gold/20 bg-white/70 shadow-xl backdrop-blur-xl">
                 <div className="text-center">
                   <span className="text-6xl">💎</span>

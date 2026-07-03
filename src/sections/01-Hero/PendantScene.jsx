@@ -278,9 +278,20 @@ function PlaceholderPendant({ scrollRotationRef }) {
 // ═══════════════════════════════════════════════════════════════════════
 
 export default function PendantScene({ scrollRotationRef }) {
+  const [fov, setFov] = useState(CAMERA_FOV);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setFov(window.innerWidth < MOBILE_BREAKPOINT ? 50 : CAMERA_FOV);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Canvas
-      camera={{ position: CAMERA_POSITION, fov: CAMERA_FOV }}
+      camera={{ position: CAMERA_POSITION, fov }}
       gl={{
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
